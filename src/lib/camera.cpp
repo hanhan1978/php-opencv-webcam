@@ -2,7 +2,7 @@
 #include "opencv2/highgui/highgui_c.h"
 #include "iostream"
 
-extern "C" int snapshot() {
+extern "C" int snapshot(const char* s) {
     cv::VideoCapture cap(0);
     if(!cap.isOpened())
     {
@@ -12,6 +12,6 @@ extern "C" int snapshot() {
 
     cv::Mat frame;
     cap.read(frame);
-    cv::imwrite("img.png", frame);
+    cv::imwrite(s, frame);
     return 0;
 }

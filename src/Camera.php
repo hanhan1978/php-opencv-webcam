@@ -9,12 +9,12 @@ class Camera {
 
     public function __construct()
     {
-        $this->ffi = \FFI::cdef( "extern int snapshot();", __DIR__ . "/lib/camera.so");
+        $this->ffi = \FFI::cdef( "extern int snapshot(const char* s);", __DIR__ . "/lib/camera.so");
     }
 
-    public function snapshot()
+    public function snapshot(string $fileName)
     {
-        $this->ffi->snapshot();
+        $this->ffi->snapshot($fileName);
     }
 
 }
