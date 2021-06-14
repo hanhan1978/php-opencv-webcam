@@ -1,0 +1,20 @@
+{
+    "name": "hanhan1978/php-opencv-webcam",
+    "description": "Take a snapshot with a web camera via OpenCV4",
+    "type": "library",
+    "require": {
+        "php": ">=7.4.0",
+        "ext-ffi": "*"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "hanhan1978",
+            "email": "ryo.tomidokoro@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "autoload": {
+        "psr-4":{"Hanhan1978\\OpenCv\\": "src/"}
+    }
+}
